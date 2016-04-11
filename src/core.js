@@ -940,9 +940,9 @@
         require('./autoUpdate');
     } else {
         window.baron = baron;
+    }
 
-        if ($ && $.fn) { // Adding baron to jQuery as plugin
-            $.fn.baron = baron;
-        }
+    if ($ && $.fn) { // Adding baron to jQuery as plugin
+        $.fn.baron = baron;
     }
 })(this);
