@@ -29,7 +29,6 @@
         'use strict';
 
         var onClient = typeof window != 'undefined';
-        var $ = scopedWindow.$;
         var _baron = baron; // Stored baron value for noConflict usage
         var pos = ['left', 'top', 'right', 'bottom', 'width', 'height'];
         // Global store for all baron instances (to be able to dispose them on html-nodes)
@@ -79,7 +78,7 @@
             var roots;
             var withParams = !!params;
             var defaultParams = {
-                $: scopedWindow.jQuery,
+                $: $,
                 direction: 'v',
                 barOnCls: '_scrollbar',
                 resizeDebounce: 0,
